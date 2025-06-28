@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="A4p-VT-r3W">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ixr-5p-HiF">
                                 <rect key="frame" x="151" y="82" width="100" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-IW-XIh" userLabel="Red Light">
@@ -34,7 +34,8 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Si0-ey-g72"/>
+                                    <constraint firstAttribute="height" constant="360" id="4Pj-I9-xj2"/>
+                                    <constraint firstAttribute="width" constant="100" id="vKO-8U-sfB"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baf-Ot-baf">
@@ -49,17 +50,26 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapStartButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOx-4G-L8l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A4p-VT-r3W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1km-O4-3jd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="baf-Ot-baf" secondAttribute="bottom" multiplier="4:3" id="5AR-Hn-sBP"/>
                             <constraint firstItem="baf-Ot-baf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="64D-ba-kwG"/>
-                            <constraint firstItem="A4p-VT-r3W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="729-is-mo1"/>
+                            <constraint firstItem="Ixr-5p-HiF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NTP-Xs-p4o"/>
+                            <constraint firstItem="Ixr-5p-HiF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1R-hN-ieL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="JFz-2e-l5D" id="Dcf-r3-KDO"/>
+                        <outlet property="redLightView" destination="OZ3-IW-XIh" id="sxx-vf-Cqv"/>
+                        <outlet property="startButton" destination="baf-Ot-baf" id="BdG-jx-Lm6"/>
+                        <outlet property="yellowLightView" destination="S7E-Ni-OKS" id="Ukx-9K-qP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
